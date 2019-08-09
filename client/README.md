@@ -1,3 +1,24 @@
+ What are the required parts of class components?
+
+ constructor(), render() functions.
+
+ Name at least three lifecycle methods?
+
+ componentDidMount(), componentDidUpdate(), componentDidUnmount().
+
+ Why are forms used so often in web applications and software?
+
+They are a convenient way to get information from a user.
+
+ What advantages are there by using a forms library like Formik?
+
+Libraries like Formik make code easier to read and write.
+
+ Why do we write tests for our apps?
+
+Tests are written to make sure code is trustable, to save money on end-to-end testing, and for the sake of documentation.
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
