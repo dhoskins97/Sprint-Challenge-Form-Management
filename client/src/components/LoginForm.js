@@ -16,7 +16,7 @@ function LoginForm( { errors, touched } ){
                 {touched.password && errors.password && <p>{errors.password}</p>}
                 <Field type="password" name="password" placeholder="Password" />
             </div>
-            <button>Register</button>
+            <button type="submit">Register</button>
 
 		</Form>	
 )
@@ -35,8 +35,11 @@ const FormikLoginForm = withFormik({
         password: Yup.string().min(6, "Password must be 6+ characters.").required("Password is required for registration.")
     }),
 
-    handleSubmit(values){
+    handleSubmit(values, {resetForm, setSubmitting}){
         console.log(values)
+        axios.post("http://localhost:5000/api/register", values)
+        .then(res => {console.log(res); resetForm(); setSubmitting(false);} )
+        .catch(err => {console.log(err); setSubmitting(false)} )
     }
 })(LoginForm)
 
